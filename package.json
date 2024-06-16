@@ -1,0 +1,66 @@
+{
+  "name": "wyvern-v3",
+  "version": "3.1.0",
+  "description": "Wyvern Protocol v3.1, Ethereum implementation",
+  "main": "index.js",
+  "scripts": {
+    "analyze": "scripts/analyze.sh",
+    "flatten": "scripts/flatten.sh",
+    "compile": "scripts/compile.sh",
+    "coverage": "scripts/coverage.sh",
+    "test": "scripts/test.sh",
+    "lint": "scripts/lint.sh",
+    "testrpc": "scripts/testrpc.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/wyvernprotocol/wyvern-v3.git"
+  },
+  "author": "Wyvern Protocol Developers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wyvernprotocol/wyvern-v3/issues"
+  },
+  "homepage": "https://github.com/wyvernprotocol/wyvern-v3#readme",
+  "devDependencies": {
+    "@babel/runtime": "^7.12.5",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "coveralls": "^3.1.0",
+    "dotenv": "^16.4.5",
+    "ethereumjs-testrpc-sc": "^6.5.1-sc.1",
+    "ethers": "5.4",
+    "ganache-cli": "^6.12.1",
+    "ganache-core": "^2.13.1",
+    "hardhat-deploy-ethers": "^0.4.2",
+    "lodash": "^4.17.20",
+    "openzeppelin-solidity": "^3.3.0",
+    "solidity-coverage": "0.8.12",
+    "solium": "^1.2.5",
+    "standard": "^16.0.3",
+    "truffle": "^5.1.55",
+    "truffle-flattener": "^1.5.0",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "truffle-hdwallet-provider-klaytn": "^1.0.13-a",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.1.1",
+    "web3": "^4.9.0"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^1.0.1",
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@nomiclabs/hardhat-etherscan": "^3.0.0",
+    "@nomiclabs/hardhat-solhint": "^3.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
+    "@openzeppelin/contracts-upgradeable": "^5.0.2",
+    "@typechain/ethers-v5": "^10.1.0",
+    "@typechain/hardhat": "^6.1.2",
+    "chai": "^4.2.0",
+    "hardhat": "^2.22.5",
+    "hardhat-deploy": "^0.12.4",
+    "hardhat-gas-reporter": "^2.2.0",
+    "typescript": "^5.4.5"
+  }
+}
