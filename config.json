@@ -33,9 +33,9 @@
       "WyvernExchange": "0xDBA99cE125C6140dC4b30D48cBdDc57Bc67dc2d1"
     },
     "arbitrum": {
-      "Migrations": "0x0E43c959ab13aC2C1ea79e475A980B499e364CE3",
-      "WyvernRegistry": "0x017d106A7511877cb7da89b8Bf67e6f7D41A6F84",
-      "WyvernExchange": "0x70D395E78280eE071922B56Aeca9Cee295c8045F"
+      "Migrations": "0xc288Ab919C1D6473f2e5Bacc4a7b9d060f5DEa1F",
+      "WyvernRegistry": "0xF7eA9F3304c54573A93AA603a4211e825aaa5A3c",
+      "WyvernExchange": "0x06f294BAeEbb4Ff73AaA6C3139B375fC8AAAF0eb"
     }
   }
 }

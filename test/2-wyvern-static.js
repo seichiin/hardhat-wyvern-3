@@ -1,15 +1,28 @@
-/* global artifacts:false, it:false, contract:false, assert:false */
+const { expect } = require("chai");
 
-const WyvernAtomicizer = artifacts.require('WyvernAtomicizer')
-const WyvernStatic = artifacts.require('WyvernStatic')
+describe("WyvernStatic Contract", function () {
+  let WyvernAtomicizer;
+  let WyvernStatic;
+  let atomicizerInstance;
+  let staticInstance;
 
-contract('WyvernStatic',() => {
-  it('is deployed',async () => {
-    return await WyvernStatic.deployed();
-  })
+  before(async function () {
+    // Deploy contracts and fetch instances
+    [WyvernAtomicizer, WyvernStatic] = await Promise.all([
+      ethers.getContractFactory("WyvernAtomicizer"),
+      ethers.getContractFactory("WyvernStatic"),
+    ]);
 
-  it('has the correct atomicizer address',async () => {
-    let [atomicizerInstance,staticInstance] = await Promise.all([WyvernAtomicizer.deployed(),WyvernStatic.deployed()])
-    assert.equal(await staticInstance.atomicizer(),atomicizerInstance.address,'incorrect atomicizer address')
-  })
-})
+    atomicizerInstance = await WyvernAtomicizer.deploy();
+    staticInstance = await WyvernStatic.deploy(atomicizerInstance.address); // Deploy WyvernStatic with atomicizer address
+  });
+
+  it("is deployed", async function () {
+    expect(staticInstance.address).to.not.equal(ethers.constants.AddressZero);
+  });
+
+  it("has the correct atomicizer address", async function () {
+    const actualAtomicizerAddress = await staticInstance.atomicizer();
+    expect(actualAtomicizerAddress).to.equal(atomicizerInstance.address);
+  });
+});
